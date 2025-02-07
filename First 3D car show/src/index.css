@@ -1,0 +1,13 @@
+
+body{
+  margin: 0;
+  padding: 0;
+  top: 0;;
+}
+#canvas-containor{
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  overflow-x: hidden;
+
+}
