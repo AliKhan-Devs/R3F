@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  top: 0;
+  left: 0;
+  padding: 0;
+}
+
+/* Custom scrollbar for the entire page */
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Light gray background for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ee4bee; /* The color you want for the thumb (scrollbar) */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+}
+
+
+/* Customizing dots */
+.slick-dots li button:before {
+  font-size: 15px !important; /* Ensure the size is applied */
+  color: white !important;    /* Ensure the color is applied */
+}
+
+.slick-dots li.slick-active button:before {
+  color: white !important;      /* Ensure the active dot color is applied */
+}
+
+/* Customizing arrows */
+.slick-prev, .slick-next {
+  width: 30px !important;  /* Ensure the width is applied */
+  height: 30px !important; /* Ensure the height is applied */
+  z-index: 1 !important;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 30px !important; /* Ensure the size of the arrow is applied */
+  color: white !important;    /* Ensure the color is applied */
+}
+
+@keyframes waveAnimation {
+  0% {
+      transform: rotateZ(-20deg);
+  }
+  50% {
+      transform: rotateZ(20deg);
+  }
+  100% {
+      transform: rotateZ(-20deg);
+  }
+}
+
+/* Apply the wave animation */
+.wave {
+  display: inline-block;
+  animation: waveAnimation 1s infinite ease-in-out;
+}
