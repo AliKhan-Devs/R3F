@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-    {/* <div id="canvas-containor">
+    <div id="canvas-containor">
     <KeyboardControls map={map}>
       <Canvas shadows camera={{ position: [10, 10, 10], fov: 30 }}>
         <color attach="background" args={["#ececec"]} />
@@ -38,20 +38,8 @@ function App() {
         </Suspense>
       </Canvas>
     </KeyboardControls>
-    </div> */}
-    <div id="canvas-containor">
-
-<Canvas>
-  <Suspense fallback={null}>
-    <GizmoHelper>
-      <GizmoViewport />
-    </GizmoHelper>
-    <OrbitControls/>
-    <ambientLight intensity={1} />
-    <Project />
-  </Suspense>
-</Canvas>
     </div>
+   
 
     </>
   );
